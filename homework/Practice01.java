@@ -14,11 +14,8 @@ public class Practice01 {
         if (from > to) {
             System.out.println("输入错误！");
             return 0;
-        } else if (to < 0) {
-            int s = r.nextInt(num) + to;
-            return s;
-        }else{
-            int s = r.nextInt(num) + from;
+        } else{
+            int s = r.nextInt(num + 1 ) + from;
             return s;
         }
     }
