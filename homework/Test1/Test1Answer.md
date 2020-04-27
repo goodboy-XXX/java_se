@@ -163,7 +163,7 @@ new A().method();
 A.info("王五"); 
 } 
 }
-报错，静态方法中不能调用非静态成员变量
+报错，静态方法中不能调用非静态成员变量（this）
 2. 找出下⾯有⼏个错误,并且找出原因 
 class A{ 
 private fifinal String NAME; //NAME没有赋值
@@ -186,13 +186,13 @@ System.out.println(“名字是:”+name);
 } 
 static void method(){ 
 method(“还有谁”); 
- 
+
 } 
 public static void main(String[] args){ 
 A.method(); 
 } 
 } 
-输出：还有谁
+输出：报错，静态方法调用了非静态方法
 附加题( 5分 ) 
 class A{ 
 private static fifinal String ADDRESS="栖霞区下⽔道..."; 
