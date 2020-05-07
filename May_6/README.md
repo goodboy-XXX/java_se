@@ -86,7 +86,7 @@ class Derived extends Base {
 public class Main {
     public static void main(String args[]) {
         Base b = new Derived();
-        b.foo();		//Derived
+        b.foo();		//报错，子类重写访问修饰符比父类低
     }
 } 
 ```
@@ -192,7 +192,7 @@ class Derived extends Test
     public static void main(String[] args) 
     { 
         Derived object = new Test(); 
-        object.myMethod(); 		//Test
+        object.myMethod(); 		//报错，父类引用无法转为子类对象
     } 
 } 
 ```
