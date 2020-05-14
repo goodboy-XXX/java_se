@@ -34,6 +34,7 @@ public class Calculator {
      * @return 计算表达式的结果
      * @throws CalculatorException 如果用户输入不合法，或者已键入“ quit”。抛出CalculatorException 的几个子类之一，以便提供有关错误原因的更多信息.
      */
+
     public static int compute(String[] tokens) throws CalculatorException, QuitException, IllegalInputException {
         // 不同符号数量的各种情况
         switch (tokens.length) {
@@ -132,14 +133,14 @@ public class Calculator {
         } catch (IllegalInputException e) {
             // TODO: complete implementation.
             System.out.println(e);
-
         } catch (CalculatorException e) {
             // 这捕获了剩下的CalculatorException情况：DivideByZeroException
             // TODO: complete implementation.
             System.out.println(e);
         } finally {
+            System.out.print("Input was :");
             for (String token : tokens) {
-                System.out.print("Input was :" + token);
+                System.out.print(token + "");
             }
         }
 
